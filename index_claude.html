@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jollyany Express Clone</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Topbar -->
+    <div class="bg-dark text-light py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="bi bi-telephone-fill me-1"></i> +1 (234) 567-8910
+                        </div>
+                        <div>
+                            <i class="bi bi-envelope-fill me-1"></i> info@jollyanyexpress.com
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-md-end">
+                        <div class="me-3">
+                            <a href="#" class="text-light text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="me-3">
+                            <a href="#" class="text-light text-decoration-none"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="me-3">
+                            <a href="#" class="text-light text-decoration-none"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-light text-decoration-none"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                Jollyany<span class="text-primary">Express</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+                <div class="ms-lg-3">
+                    <a href="#contact" class="btn btn-primary rounded-pill px-4">Cotización Gratis</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="position-relative bg-dark text-white">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center py-5">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <span class="badge bg-primary mb-3">Agencia Digital Creativa</span>
+                    <h1 class="display-3 fw-bold mb-4">Soluciones digitales para tu negocio</h1>
+                    <p class="lead mb-4">Ofrecemos servicios de diseño web, desarrollo de aplicaciones, marketing digital y más para impulsar tu presencia online y hacer crecer tu negocio.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#services" class="btn btn-primary btn-lg rounded-pill px-4">Nuestros Servicios</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4">Contáctanos</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="/api/placeholder/600/500" alt="Hero Image" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute bottom-0 start-0 end-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,202.7C384,213,480,203,576,165.3C672,128,768,64,864,48C960,32,1056,64,1152,85.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-primary mb-2">Por qué elegirnos</span>
+                    <h2 class="display-5 fw-bold mb-3">Lo que nos hace diferentes</h2>
+                    <p class="text-muted">Combinamos tecnología de vanguardia con un diseño excepcional para ofrecer soluciones digitales que realmente destacan.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Feature 1 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-palette-fill fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Diseño Creativo</h4>
+                            <p class="card-text text-muted">Creamos diseños únicos y atractivos que hacen que tu marca destaque en el mercado.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-code-slash fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Desarrollo Web</h4>
+                            <p class="card-text text-muted">Desarrollamos sitios web y aplicaciones de alta calidad con las últimas tecnologías.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-graph-up-arrow fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Marketing Digital</h4>
+                            <p class="card-text text-muted">Estrategias de marketing efectivas para aumentar la visibilidad de tu negocio online.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 4 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-headset fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Soporte 24/7</h4>
+                            <p class="card-text text-muted">Estamos siempre disponibles para ayudarte con cualquier problema o consulta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="/api/placeholder/600/500" alt="About Us" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="badge bg-primary mb-2">Acerca de nosotros</span>
+                    <h2 class="display-5 fw-bold mb-3">Agencia digital con más de 10 años de experiencia</h2>
+                    <p class="text-muted mb-4">Fundada en 2013, Jollyany Express se ha convertido en una de las agencias digitales líderes, ayudando a empresas de todos los tamaños a establecer una presencia online sólida y a crecer digitalmente.</p>
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                <i class="bi bi-check-circle-fill text-primary"></i>
+                            </div>
+                            <span>Profesionales altamente cualificados</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                <i class="bi bi-check-circle-fill text-primary"></i>
+                            </div>
+                            <span>Proyectos entregados a tiempo</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                <i class="bi bi-check-circle-fill text-primary"></i>
+                            </div>
+                            <span>Atención personalizada</span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="text-center">
+                            <h3 class="fw-bold text-primary display-4">250+</h3>
+                            <p class="text-muted">Proyectos completados</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="fw-bold text-primary display-4">50+</h3>
+                            <p class="text-muted">Clientes satisfechos</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="fw-bold text-primary display-4">15+</h3>
+                            <p class="text-muted">Expertos en el equipo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-primary mb-2">Nuestros servicios</span>
+                    <h2 class="display-5 fw-bold mb-3">Lo que ofrecemos</h2>
+                    <p class="text-muted">Proporcionamos una amplia gama de servicios digitales para ayudarte a alcanzar tus objetivos empresariales.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-laptop fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Diseño Web</h4>
+                            <p class="card-text text-muted">Creamos sitios web atractivos y funcionales que representan tu marca y convierten visitantes en clientes.</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-phone fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Desarrollo de Apps</h4>
+                            <p class="card-text text-muted">Desarrollamos aplicaciones móviles personalizadas para iOS y Android que mejoran la experiencia de tus usuarios.</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-search fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">SEO y SEM</h4>
+                            <p class="card-text text-muted">Optimizamos tu presencia online para mejorar tu posicionamiento en los motores de búsqueda.</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-megaphone fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Marketing de Contenidos</h4>
+                            <p class="card-text text-muted">Creamos contenido relevante y valioso para atraer y retener a tu audiencia objetivo.</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-graph-up fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Análisis de Datos</h4>
+                            <p class="card-text text-muted">Analizamos el comportamiento de tus usuarios para optimizar tus estrategias digitales.</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-people fs-3 text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Gestión de Redes Sociales</h4>
+                            <p class="card-text text-muted">Administramos tus redes sociales para aumentar tu visibilidad y engagement con tu audiencia.</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-primary mb-2">Nuestro trabajo</span>
+                    <h2 class="display-5 fw-bold mb-3">Proyectos destacados</h2>
+                    <p class="text-muted">Échale un vistazo a algunos de nuestros mejores trabajos realizados para clientes de diferentes industrias.</p>
+                </div>
+            </div>
+            
+            <!-- Portfolio Filters -->
+            <div class="text-center mb-5">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary active px-4">Todos</button>
+                    <button type="button" class="btn btn-outline-primary px-4">Diseño Web</button>
+                    <button type="button" class="btn btn-outline-primary px-4">Apps</button>
+                    <button type="button" class="btn btn-outline-primary px-4">Branding</button>
+                </div>
+            </div>
+            
+            <!-- Portfolio Items -->
+            <div class="row g-4">
+                <!-- Item 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm">
+                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Portfolio Item">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Diseño Web Corporativo</h5>
+                            <p class="card-text text-muted">Diseño y desarrollo web</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm">
+                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Portfolio Item">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">App de Gestión de Tareas</h5>
+                            <p class="card-text text-muted">Desarrollo de aplicaciones</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card border-0 shadow-sm">
+                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Portfolio Item">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Rediseño de Marca</h5>
+                            <p class="card-text text-muted">Branding e identidad</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm">
+                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Portfolio Item">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">E-commerce Fashion</h5>
+                            <p class="card-text text-muted">Diseño y desarrollo web</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm">
+                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Portfolio Item">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">App de Fitness</h5>
+                            <p class="card-text text-muted">Desarrollo de aplicaciones</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card border-0 shadow-sm">
+                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Portfolio Item">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Campaña de Marketing</h5>
+                            <p class="card-text text-muted">Marketing digital</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary rounded-pill px-4">Ver más proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container py-4">
+            <div class="row g-4 text-center">
+                <div class="col-md-3" data-aos="fade-up">
+                    <h2 class="display-4 fw-bold mb-0">250+</h2>
+                    <p class="mb-0">Proyectos completados</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="display-4 fw-bold mb-0">50+</h2>
+                    <p class="mb-0">Clientes satisfechos</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="display-4 fw-bold mb-0">15+</h2>
+                    <p class="mb-0">Premios ganados</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="display-4 fw-bold mb-0">10+</h2>
+                    <p class="mb-0">Años de experiencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-primary mb-2">Nuestro equipo</span>
+                    <h2 class="display-5 fw-bold mb-3">Profesionales talentosos</h2>
+                    <p class="text-muted">Conoce a los expertos detrás de nuestros proyectos exitosos.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Team Member 1 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Team Member">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold mb-1">Carlos Rodríguez</h5>
+                            <p class="text-muted">Director Ejecutivo</p>
+                            <div class="d-flex justify-content-center gap-2 mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Team Member">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold mb-1">Ana Martínez</h5>
+                            <p class="text-muted">Directora Creativa</p>
+                            <div class="d-flex justify-content-center gap-2 mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Team Member">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold mb-1">Javier López</h5>
+                            <p class="text-muted">Desarrollador Senior</p>
+                            <div class="d-flex justify-content-center gap-2 mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/300/300" class="card-img-top" alt="Team Member">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold mb-1">Laura Gómez</h5>
+                            <p class="text-muted">Marketing Manager</p>
+                            <div class="d-flex justify-content-center gap-2 mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-primary mb-2">Testimonios</span>
+                    <h2 class="display-5 fw-bold mb-3">Lo que dicen nuestros clientes</h2>
+                    <p class="text-muted">Estas son algunas opiniones de nuestros clientes satisfechos.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text mb-4">"Trabajar con Jollyany Express ha sido una experiencia increíble. El equipo es muy profesional y entregaron nuestro proyecto antes de lo esperado. ¡Totalmente recomendado!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="/api/placeholder/50/50" alt="Client" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Roberto Sánchez</h6>
+                                    <small class="text-muted">CEO, TechStart</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text mb-4">"Nuestro sitio web no solo se ve increíble, sino que también ha aumentado nuestras conversiones en un 30%. El equipo de Jollyany Express realmente entiende el marketing digital."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="/api/placeholder/50/50" alt="Client" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">María Fernández</h6>
+                                    <small class="text-muted">Directora de Marketing, FashionPlus</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text mb-4">"La aplicación móvil que desarrollaron para nosotros ha recibido excelentes críticas por parte de nuestros usuarios. La usabilidad y el diseño son excepcionales."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="/api/placeholder/50/50" alt="Client" class="rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Daniel Torres</h6>
+                                    <small class="text-muted">Fundador, HealthApp</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-3">¿Listo para impulsar tu negocio?</h2>
+                    <p class="lead mb-0">Contáctanos hoy mismo para una consulta gratuita y descubre cómo podemos ayudarte.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#contact" class="btn btn-light btn-lg rounded-pill px-4">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-primary mb-2">Nuestro Blog</span>
+                    <h2 class="display-5 fw-bold mb-3">Últimas noticias y artículos</h2>
+                    <p class="text-muted">Mantente al día con las últimas tendencias y noticias del mundo digital.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Blog Post 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Blog Post">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-primary me-2">Diseño Web</span>
+                                <small class="text-muted">15 Mayo, 2025</small>
+                            </div>
+                            <h5 class="card-title fw-bold">Tendencias de Diseño Web para 2025</h5>
+                            <p class="card-text text-muted">Descubre las últimas tendencias en diseño web que dominarán el mercado este año.</p>
+                            <a href="#" class="btn btn-link text-primary p-0">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Blog Post">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-primary me-2">Marketing</span>
+                                <small class="text-muted">10 Mayo, 2025</small>
+                            </div>
+                            <h5 class="card-title fw-bold">Estrategias de SEO efectivas</h5>
+                            <p class="card-text text-muted">Aprende cómo mejorar el posicionamiento de tu sitio web en los motores de búsqueda.</p>
+                            <a href="#" class="btn btn-link text-primary p-0">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Blog Post">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-primary me-2">Desarrollo</span>
+                                <small class="text-muted">5 Mayo, 2025</small>
+                            </div>
+                            <h5 class="card-title fw-bold">La importancia de la experiencia de usuario</h5>
+                            <p class="card-text text-muted">Aprende por qué la UX es fundamental para el éxito de cualquier proyecto digital.</p>
+                            <a href="#" class="btn btn-link text-primary p-0">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary rounded-pill px-4">Ver más artículos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-primary mb-2">Contacto</span>
+                    <h2 class="display-5 fw-bold mb-3">¿Tienes un proyecto en mente?</h2>
+                    <p class="text-muted">Contáctanos para discutir cómo podemos ayudarte a alcanzar tus objetivos digitales.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold mb-4">Información de contacto</h4>
+                            <div class="d-flex mb-3">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                    <i class="bi bi-geo-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Dirección</h6>
+                                    <p class="text-muted mb-0">Calle Principal 123, Madrid, España</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                    <i class="bi bi-telephone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Teléfono</h6>
+                                    <p class="text-muted mb-0">+34 123 456 789</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                    <i class="bi bi-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Email</h6>
+                                    <p class="text-muted mb-0">info@jollyanyexpress.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                    <i class="bi bi-clock text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Horario</h6>
+                                    <p class="text-muted mb-0">Lunes a Viernes: 9:00 - 18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold mb-4">Envíanos un mensaje</h4>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="name" placeholder="Nombre">
+                                            <label for="name">Nombre</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="tel" class="form-control" id="phone" placeholder="Teléfono">
+                                            <label for="phone">Teléfono</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" id="service">
+                                                <option selected disabled>Selecciona un servicio</option>
+                                                <option value="1">Diseño Web</option>
+                                                <option value="2">Desarrollo de Apps</option>
+                                                <option value="3">SEO y SEM</option>
+                                                <option value="4">Marketing de Contenidos</option>
+                                                <option value="5">Gestión de Redes Sociales</option>
+                                            </select>
+                                            <label for="service">Servicio de interés</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="message" style="height: 150px" placeholder="Mensaje"></textarea>
+                                            <label for="message">Mensaje</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary rounded-pill px-4">Enviar mensaje</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-0">
+        <div class="container-fluid p-0">
+            <img src="/api/placeholder/1200/300" alt="Map" class="img-fluid w-100">
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-primary mb-2">Nuestros clientes</span>
+                    <h2 class="display-5 fw-bold mb-3">Empresas que confían en nosotros</h2>
+                    <p class="text-muted">Trabajamos con empresas de diversos sectores e industrias.</p>
+                </div>
+            </div>
+            <div class="row g-4 align-items-center">
+                <div class="col-6 col-md-3 col-lg-2" data-aos="zoom-in">
+                    <img src="/api/placeholder/200/100" alt="Client Logo" class="img-fluid mx-auto d-block">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="/api/placeholder/200/100" alt="Client Logo" class="img-fluid mx-auto d-block">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="/api/placeholder/200/100" alt="Client Logo" class="img-fluid mx-auto d-block">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="/api/placeholder/200/100" alt="Client Logo" class="img-fluid mx-auto d-block">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="/api/placeholder/200/100" alt="Client Logo" class="img-fluid mx-auto d-block">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="/api/placeholder/200/100" alt="Client Logo" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-3">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold mb-4">Jollyany<span class="text-primary">Express</span></h4>
+                    <p class="mb-4">Somos una agencia digital especializada en brindar soluciones integrales para impulsar tu presencia online y hacer crecer tu negocio.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="#about" class="text-light text-decoration-none">Acerca de</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Servicios</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-light text-decoration-none">Portafolio</a></li>
+                        <li class="mb-2"><a href="#team" class="text-light text-decoration-none">Equipo</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4">Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Diseño Web</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Desarrollo de Apps</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">SEO y SEM</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Marketing de Contenidos</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Análisis de Datos</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Gestión de Redes Sociales</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4">Boletín informativo</h5>
+                    <p>Suscríbete para recibir las últimas noticias y actualizaciones.</p>
+                    <form class="mt-3">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Tu email" aria-label="Tu email">
+                            <button class="btn btn-primary" type="button">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">© 2025 Jollyany Express. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Diseñado por <a href="#" class="text-primary text-decoration-none">Jollyany Express</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary rounded-circle shadow position-fixed bottom-0 end-0 m-4" id="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
