@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #0d6efd !important;
+}
+
+/* Cards y elementos comunes */
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para la zona de arrastrar y soltar */
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.drop-zone:hover {
+    background: #e9ecef;
+    border-color: #0d6efd;
+}
+
+.drop-zone.dragover {
+    background: #e9ecef;
+    border-color: #0d6efd;
+    transform: scale(1.02);
+}
+
+.drop-zone label {
+    display: block;
+    margin-bottom: 10px;
+    color: #495057;
+    font-size: 1.1rem;
+}
+
+/* Estilos para la tabla */
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #495057;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Estilos para los botones de DataTables */
+.dt-buttons {
+    margin-bottom: 15px;
+}
+
+.dt-buttons .btn {
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+/* Estilos para el campo de búsqueda */
+.dataTables_filter input {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+/* Estilos para la paginación */
+.dataTables_paginate .paginate_button {
+    border-radius: 4px;
+    margin: 0 2px;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: white !important;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .drop-zone {
+        padding: 20px;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    .table-container {
+        margin-top: 15px;
+    }
+}
+
+/* Estilos para mensajes de ayuda */
+.form-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Estilos para el input de archivo */
+input[type="file"] {
+    display: none;
+}
+
+/* Estilos para el contenedor de la tabla */
+.dataTables_wrapper {
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+}
+
+/* Estilos para el selector de número de registros */
+.dataTables_length select {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+/* Estilos para el mensaje de "No hay datos" */
+.dataTables_empty {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+} 

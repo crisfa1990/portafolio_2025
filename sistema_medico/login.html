@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - MediSystem</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="bg-primary bg-gradient min-vh-100 d-flex align-items-center justify-content-center">
+    <!-- Botón para volver a inicio -->
+    <a href="index.html" class="position-absolute top-0 start-0 m-4 text-white text-decoration-none d-flex align-items-center gap-2">
+        <i class="fas fa-arrow-left"></i> Volver al inicio
+    </a>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card shadow-lg animate__animated animate__fadeIn">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <div class="display-4 text-primary mb-3">
+                                <i class="fas fa-hospital-alt"></i>
+                            </div>
+                            <h4 class="mb-0">MediSystem</h4>
+                            <p class="text-muted">Sistema de Gestión Clínica</p>
+                        </div>
+                        
+                        <form>
+                            <div class="form-floating mb-3 animate__animated animate__fadeInUp animate__delay-1s">
+                                <input type="text" class="form-control" id="username" placeholder="Usuario">
+                                <label for="username"><i class="fas fa-user me-2"></i>Usuario</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3 animate__animated animate__fadeInUp animate__delay-2s">
+                                <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                                <label for="password"><i class="fas fa-lock me-2"></i>Contraseña</label>
+                            </div>
+                            
+                            <div class="form-check mb-3 animate__animated animate__fadeInUp animate__delay-3s">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    Recordarme
+                                </label>
+                            </div>
+                            
+                            <div class="d-grid animate__animated animate__fadeInUp animate__delay-4s">
+                                <button type="submit" class="btn btn-primary py-2">
+                                    <i class="fas fa-sign-in-alt me-2"></i> Iniciar Sesión
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div class="text-center mt-4 animate__animated animate__fadeInUp animate__delay-5s">
+                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+                                ¿Olvidó su contraseña?
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center text-white mt-4 animate__animated animate__fadeIn animate__delay-6s">
+                    <p class="mb-0">© 2023 MediSystem. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Recuperación de Contraseña -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Recuperar Contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ingrese su correo electrónico registrado para recibir instrucciones de recuperación de contraseña.</p>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="recoveryEmail" placeholder="Correo electrónico">
+                        <label for="recoveryEmail"><i class="fas fa-envelope me-2"></i>Correo electrónico</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Enviar Instrucciones</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

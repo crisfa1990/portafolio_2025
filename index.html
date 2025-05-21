@@ -1,0 +1,933 @@
+<!--
+    landing_crisfa - HTML
+    @author Cristian Farías
+    @copyright 2024 Cristian Farías
+    @license MIT
+    
+    Este archivo contiene la estructura HTML
+    para el portafolio web landing_crisfa.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevSolutions - Desarrollo Web y Aplicaciones. Transformamos ideas en soluciones digitales innovadoras para impulsar el crecimiento de tu negocio.">
+    <title>DevSolutions - Desarrollo Web y Aplicaciones</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">DevSolutions</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonios">Testimonios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portafolio">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <button id="darkModeToggle" class="btn btn-outline-dark" aria-label="Cambiar modo oscuro">
+                                <i class="bi bi-moon-fill"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="bg-light py-5 mt-5">
+            <div class="container">
+                <div class="row align-items-center min-vh-75">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Transformamos Ideas en Soluciones Digitales Innovadoras</h1>
+                        <p class="lead mb-4">Somos expertos en desarrollo web y aplicaciones móviles, creando soluciones que impulsan el crecimiento de tu negocio en el mundo digital.</p>
+                        <div class="d-flex gap-3 mb-4">
+                            <a href="#contacto" class="btn btn-primary btn-lg">Solicitar Consulta Gratuita</a>
+                            <a href="#servicios" class="btn btn-outline-primary btn-lg">Ver Servicios</a>
+                        </div>
+                        <div class="d-flex gap-4">
+                            <div class="text-center">
+                                <h3 class="h2 fw-bold text-primary">100+</h3>
+                                <p class="text-muted mb-0">Proyectos Completados</p>
+                            </div>
+                            <div class="text-center">
+                                <h3 class="h2 fw-bold text-primary">50+</h3>
+                                <p class="text-muted mb-0">Clientes Satisfechos</p>
+                            </div>
+                            <div class="text-center">
+                                <h3 class="h2 fw-bold text-primary">10+</h3>
+                                <p class="text-muted mb-0">Años de Experiencia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://placehold.co/600x400/0d6efd/ffffff?text=Desarrollo+Web" alt="Hero Image" class="img-fluid rounded shadow hero-image" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador de sección -->
+        <div class="section-divider">
+            <div class="container">
+                <div class="divider-content">
+                    <i class="bi bi-code-slash" aria-hidden="true"></i>
+                    <span>Soluciones Digitales</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicios -->
+        <section id="servicios" class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-code-square mb-3" aria-hidden="true"></i>
+                                <h3 class="card-title">Desarrollo Web</h3>
+                                <p class="card-text">Creamos sitios web modernos y responsivos que destacan tu marca.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2" aria-hidden="true"></i> Sitios Web Corporativos</li>
+                                    <li><i class="bi bi-check2" aria-hidden="true"></i> E-commerce</li>
+                                    <li><i class="bi bi-check2" aria-hidden="true"></i> Landing Pages</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-phone mb-3" aria-hidden="true"></i>
+                                <h3 class="card-title">Aplicaciones Móviles</h3>
+                                <p class="card-text">Desarrollamos apps nativas e híbridas para iOS y Android.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2" aria-hidden="true"></i> Apps Nativas</li>
+                                    <li><i class="bi bi-check2" aria-hidden="true"></i> Apps Híbridas</li>
+                                    <li><i class="bi bi-check2" aria-hidden="true"></i> PWAs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-graph-up mb-3" aria-hidden="true"></i>
+                                <h3 class="card-title">Marketing Digital</h3>
+                                <p class="card-text">Estrategias efectivas para aumentar tu presencia online.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check2" aria-hidden="true"></i> SEO</li>
+                                    <li><i class="bi bi-check2" aria-hidden="true"></i> Redes Sociales</li>
+                                    <li><i class="bi bi-check2" aria-hidden="true"></i> Email Marketing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador -->
+        <div class="section-divider">
+            <div class="container">
+                <div class="divider-content">
+                    <i class="bi bi-people-fill" aria-hidden="true"></i>
+                    <span>Sobre Nosotros</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nosotros -->
+        <section id="nosotros" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p class="lead">Somos un equipo apasionado de desarrolladores y diseñadores que crean soluciones digitales innovadoras.</p>
+                        <p>Con más de 10 años de experiencia en el mercado, nos especializamos en crear experiencias digitales únicas que ayudan a nuestros clientes a alcanzar sus objetivos.</p>
+                        <div class="mt-4">
+                            <div class="row g-4">
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-primary me-2" aria-hidden="true"></i>
+                                        <span>Equipo Experto</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-primary me-2" aria-hidden="true"></i>
+                                        <span>Proyectos Exitosos</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-primary me-2" aria-hidden="true"></i>
+                                        <span>Soporte 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-primary me-2" aria-hidden="true"></i>
+                                        <span>Garantía de Calidad</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://placehold.co/600x400/0d6efd/ffffff?text=Equipo+DevSolutions" alt="Equipo" class="img-fluid rounded shadow" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador de sección -->
+        <div class="section-divider">
+            <div class="container">
+                <div class="divider-content">
+                    <i class="bi bi-briefcase" aria-hidden="true"></i>
+                    <span>Portafolio</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portafolio -->
+        <section id="portafolio" class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="portfolio-item animate-on-scroll">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="https://placehold.co/400x300/0d6efd/ffffff?text=Sistema+Médico" alt="Sistema Médico" loading="lazy">
+                                    <div class="portfolio-overlay">
+                                        <div class="portfolio-content">
+                                            <h5 class="portfolio-title">Sistema Médico</h5>
+                                            <p class="portfolio-description">Sistema integral para la gestión de pacientes, citas y expedientes médicos.</p>
+                                            <div class="portfolio-tags">
+                                                <span class="badge">PHP</span>
+                                                <span class="badge">MySQL</span>
+                                                <span class="badge">Bootstrap</span>
+                                            </div>
+                                            <a href="sistema_medico/index.html" class="btn btn-light btn-sm mt-3">Ver Proyecto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="portfolio-item animate-on-scroll">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="https://placehold.co/400x300/0d6efd/ffffff?text=Sistema+de+Ventas+CFS" alt="Sistema de Ventas CFS" loading="lazy">
+                                    <div class="portfolio-overlay">
+                                        <div class="portfolio-content">
+                                            <h5 class="portfolio-title">Sistema de Ventas CFS</h5>
+                                            <p class="portfolio-description">Sistema completo para la gestión de ventas, inventario y facturación.</p>
+                                            <div class="portfolio-tags">
+                                                <span class="badge">PHP</span>
+                                                <span class="badge">MySQL</span>
+                                                <span class="badge">JavaScript</span>
+                                            </div>
+                                            <a href="sistema_venta_cfs/index.html" class="btn btn-light btn-sm mt-3">Ver Proyecto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="portfolio-item animate-on-scroll">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="https://placehold.co/400x300/0d6efd/ffffff?text=Sistema+de+Gestión" alt="Sistema de Gestión" loading="lazy">
+                                    <div class="portfolio-overlay">
+                                        <div class="portfolio-content">
+                                            <h5 class="portfolio-title">Sistema de Gestión</h5>
+                                            <p class="portfolio-description">Sistema integral para la gestión de recursos empresariales.</p>
+                                            <div class="portfolio-tags">
+                                                <span class="badge">Vue.js</span>
+                                                <span class="badge">Laravel</span>
+                                                <span class="badge">MySQL</span>
+                                            </div>
+                                            <a href="sistema_gestion/index.html" class="btn btn-light btn-sm mt-3">Ver Proyecto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador -->
+        <div class="section-divider">
+            <div class="container">
+                <div class="divider-content">
+                    <i class="bi bi-chat-quote-fill" aria-hidden="true"></i>
+                    <span>Testimonios</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonios -->
+        <section id="testimonios" class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://placehold.co/50x50/0d6efd/ffffff?text=JP" alt="Cliente" class="rounded-circle me-3" loading="lazy">
+                                    <div>
+                                        <h5 class="card-title mb-0">Juan Pérez</h5>
+                                        <small class="text-muted">CEO, TechCorp</small>
+                                    </div>
+                                </div>
+                                <p class="card-text">"Excelente trabajo en nuestro sitio web. El equipo fue profesional y entregó resultados excepcionales."</p>
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://placehold.co/50x50/0d6efd/ffffff?text=MG" alt="Cliente" class="rounded-circle me-3" loading="lazy">
+                                    <div>
+                                        <h5 class="card-title mb-0">María García</h5>
+                                        <small class="text-muted">Directora, InnovateX</small>
+                                    </div>
+                                </div>
+                                <p class="card-text">"La mejor decisión que tomamos fue trabajar con este equipo. Su expertise y dedicación son incomparables."</p>
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://placehold.co/50x50/0d6efd/ffffff?text=CL" alt="Cliente" class="rounded-circle me-3" loading="lazy">
+                                    <div>
+                                        <h5 class="card-title mb-0">Carlos López</h5>
+                                        <small class="text-muted">Fundador, StartupHub</small>
+                                    </div>
+                                </div>
+                                <p class="card-text">"Transformaron nuestra visión en realidad. El resultado superó nuestras expectativas."</p>
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador -->
+        <div class="section-divider">
+            <div class="container">
+                <div class="divider-content">
+                    <i class="bi bi-question-circle-fill" aria-hidden="true"></i>
+                    <span>Preguntas Frecuentes</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion custom-accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        <i class="bi bi-question-circle me-2" aria-hidden="true"></i>
+                                        ¿Cuál es el proceso de trabajo?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div class="faq-answer">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><strong>Fase 1 - Consulta Inicial</strong><br>
+                                                    Reunión para entender tus necesidades y objetivos.</p>
+                                                    <p><strong>Fase 2 - Planificación</strong><br>
+                                                    Desarrollo de la estrategia y cronograma del proyecto.</p>
+                                                    <p><strong>Fase 3 - Diseño</strong><br>
+                                                    Creación de wireframes y prototipos para tu aprobación.</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p><strong>Fase 4 - Desarrollo</strong><br>
+                                                    Implementación del proyecto con actualizaciones semanales.</p>
+                                                    <p><strong>Fase 5 - Pruebas</strong><br>
+                                                    Testing exhaustivo en diferentes dispositivos y navegadores.</p>
+                                                    <p><strong>Fase 6 - Lanzamiento</strong><br>
+                                                    Implementación final y soporte post-lanzamiento.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        <i class="bi bi-question-circle me-2" aria-hidden="true"></i>
+                                        ¿Cuánto tiempo toma un proyecto?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div class="faq-answer">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><strong>Landing Pages</strong><br>
+                                                    2-4 semanas</p>
+                                                    <p><strong>Sitios Web Corporativos</strong><br>
+                                                    4-8 semanas</p>
+                                                    <p><strong>E-commerce</strong><br>
+                                                    6-12 semanas</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p><strong>Aplicaciones Móviles</strong><br>
+                                                    8-16 semanas</p>
+                                                    <p><strong>Sistemas Personalizados</strong><br>
+                                                    12-24 semanas</p>
+                                                    <p class="text-muted small mt-3">* Tiempos estimados que pueden variar según requisitos específicos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        <i class="bi bi-question-circle me-2" aria-hidden="true"></i>
+                                        ¿Ofrecen mantenimiento y soporte?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div class="faq-answer">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><strong>Plan Básico</strong><br>
+                                                    Actualizaciones de seguridad y correcciones de errores.</p>
+                                                    <p><strong>Plan Estándar</strong><br>
+                                                    Plan básico + actualizaciones de contenido y soporte por email.</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p><strong>Plan Premium</strong><br>
+                                                    Plan estándar + soporte telefónico prioritario y desarrollo de nuevas funcionalidades.</p>
+                                                    <p class="text-primary"><strong>Soporte 24/7</strong><br>
+                                                    Disponible para emergencias críticas.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        <i class="bi bi-question-circle me-2" aria-hidden="true"></i>
+                                        ¿Qué tecnologías utilizan?
+                                    </button>
+                                </h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div class="faq-answer">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><strong>Frontend</strong><br>
+                                                    HTML5, CSS3, JavaScript, React, Vue.js, Bootstrap</p>
+                                                    <p><strong>Backend</strong><br>
+                                                    PHP, Node.js, Python, Laravel, Django</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p><strong>Bases de Datos</strong><br>
+                                                    MySQL, PostgreSQL, MongoDB</p>
+                                                    <p><strong>Mobile & DevOps</strong><br>
+                                                    React Native, Flutter, Docker, AWS, Azure</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                        <i class="bi bi-question-circle me-2" aria-hidden="true"></i>
+                                        ¿Cómo manejan la seguridad de los proyectos?
+                                    </button>
+                                </h3>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div class="faq-answer">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><strong>Prácticas de Seguridad</strong><br>
+                                                    Implementación de estándares OWASP y auditorías periódicas.</p>
+                                                    <p><strong>Protección de Datos</strong><br>
+                                                    SSL, autenticación de dos factores y copias de seguridad diarias.</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p><strong>Monitoreo Continuo</strong><br>
+                                                    Detección y prevención de vulnerabilidades en tiempo real.</p>
+                                                    <p><strong>Capacitación</strong><br>
+                                                    Entrenamiento en seguridad para tu equipo.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                        <i class="bi bi-question-circle me-2" aria-hidden="true"></i>
+                                        ¿Cuál es su política de precios?
+                                    </button>
+                                </h3>
+                                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <div class="faq-answer">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><strong>Proyectos Personalizados</strong><br>
+                                                    Precio basado en alcance y complejidad.</p>
+                                                    <p><strong>Desarrollo por Hora</strong><br>
+                                                    Tarifa competitiva para proyectos flexibles.</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p><strong>Mantenimiento</strong><br>
+                                                    Planes mensuales según necesidades.</p>
+                                                    <p><strong>Beneficios</strong><br>
+                                                    Presupuestos sin compromiso, pagos fraccionados y descuentos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador -->
+        <div class="section-divider">
+            <div class="container">
+                <div class="divider-content">
+                    <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                    <span>Contacto</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contacto -->
+        <section id="contacto" class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <h2 class="display-5 fw-bold text-primary mb-3">¡Conversemos sobre tu Proyecto!</h2>
+                            <p class="lead text-muted">Cuéntanos sobre tus ideas y te ayudaremos a hacerlas realidad</p>
+                        </div>
+                        <div class="card border-0 shadow animate-on-scroll">
+                            <div class="card-body p-5">
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="nombre" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" id="nombre" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="asunto" class="form-label">Asunto</label>
+                                            <input type="text" class="form-control" id="asunto" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="mensaje" class="form-label">Mensaje</label>
+                                            <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary btn-lg w-100">Enviar Mensaje</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">DevSolutions</h5>
+                    <p class="mb-4">Transformando ideas en experiencias digitales únicas. Diseño y desarrollo web profesional.</p>
+                    <div class="social-icons">
+                        <a href="#" class="me-3 text-light"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3 text-light"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-3 text-light"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="me-3 text-light"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#inicio" class="text-muted text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="#servicios" class="text-muted text-decoration-none">Servicios</a></li>
+                        <li class="mb-2"><a href="#nosotros" class="text-muted text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="#portafolio" class="text-muted text-decoration-none">Portafolio</a></li>
+                        <li class="mb-2"><a href="#testimonios" class="text-muted text-decoration-none">Testimonios</a></li>
+                        <li class="mb-2"><a href="#faq" class="text-muted text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="#contacto" class="text-muted text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Misión y Visión</h5>
+                    <div class="mb-3">
+                        <h6 class="text-primary">Misión</h6>
+                        <p class="text-muted small">Desarrollar soluciones digitales innovadoras que impulsen el crecimiento y la eficiencia de nuestros clientes, brindando experiencias de usuario excepcionales.</p>
+                    </div>
+                    <div>
+                        <h6 class="text-primary">Visión</h6>
+                        <p class="text-muted small">Ser reconocidos como líderes en el desarrollo de soluciones tecnológicas que transforman negocios y mejoran la vida de las personas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-3">Objetivos</h5>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Innovación constante en soluciones digitales</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Excelencia en la calidad de nuestros servicios</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Satisfacción total del cliente</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Crecimiento sostenible y rentable</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Desarrollo de talento y equipo</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5 class="mb-3">Contacto</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i>Av. Principal 123, Ciudad</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i>+1 234 567 890</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-primary me-2"></i>info@devsolutions.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p class="text-muted small mb-3">Suscríbete para recibir las últimas novedades y ofertas especiales.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Suscribir</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center text-muted">
+                <small>&copy; 2024 DevSolutions. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+    <script>
+        // Función para cambiar el modo oscuro
+        function toggleDarkMode() {
+            const body = document.body;
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const icon = darkModeToggle.querySelector('i');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('bi-moon-fill');
+                icon.classList.add('bi-sun-fill');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                icon.classList.remove('bi-sun-fill');
+                icon.classList.add('bi-moon-fill');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // Verificar el modo guardado al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const icon = darkModeToggle.querySelector('i');
+            
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+                icon.classList.remove('bi-moon-fill');
+                icon.classList.add('bi-sun-fill');
+            }
+
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+        });
+    </script>
+    <style>
+        /* Estilos para el modo oscuro */
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .navbar {
+            background-color: #1a1a1a !important;
+            border-bottom: 1px solid #333;
+        }
+
+        .dark-mode .navbar-brand,
+        .dark-mode .nav-link {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-mode .card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+        }
+
+        .dark-mode .card-header {
+            background-color: #252525;
+            border-bottom: 1px solid #333;
+        }
+
+        .dark-mode .form-control,
+        .dark-mode .form-select {
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .text-muted {
+            color: #a0a0a0 !important;
+        }
+
+        .dark-mode .btn-outline-dark {
+            color: #e0e0e0;
+            border-color: #e0e0e0;
+        }
+
+        .dark-mode .btn-outline-dark:hover {
+            background-color: #e0e0e0;
+            color: #121212;
+        }
+
+        .dark-mode .section-divider {
+            background-color: #1a1a1a;
+        }
+
+        .dark-mode .bg-light {
+            background-color: #1a1a1a !important;
+        }
+
+        .dark-mode .accordion-button {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .accordion-button:not(.collapsed) {
+            background-color: #252525;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .accordion-body {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        /* Ajustes de colores para mejor legibilidad */
+        .dark-mode .text-primary {
+            color: #64b5f6 !important;
+        }
+
+        .dark-mode .text-warning {
+            color: #ffb74d !important;
+        }
+
+        .dark-mode .text-success {
+            color: #81c784 !important;
+        }
+
+        .dark-mode .text-danger {
+            color: #e57373 !important;
+        }
+
+        .dark-mode .text-info {
+            color: #4fc3f7 !important;
+        }
+
+        .dark-mode .text-secondary {
+            color: #b0bec5 !important;
+        }
+
+        .dark-mode .badge {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .badge.bg-primary {
+            background-color: #1976d2 !important;
+        }
+
+        .dark-mode .badge.bg-success {
+            background-color: #388e3c !important;
+        }
+
+        .dark-mode .badge.bg-warning {
+            background-color: #f57c00 !important;
+        }
+
+        .dark-mode .badge.bg-danger {
+            background-color: #d32f2f !important;
+        }
+
+        .dark-mode .badge.bg-info {
+            background-color: #0288d1 !important;
+        }
+
+        .dark-mode .btn-primary {
+            background-color: #1976d2;
+            border-color: #1976d2;
+        }
+
+        .dark-mode .btn-primary:hover {
+            background-color: #1565c0;
+            border-color: #1565c0;
+        }
+
+        .dark-mode .btn-outline-primary {
+            color: #64b5f6;
+            border-color: #64b5f6;
+        }
+
+        .dark-mode .btn-outline-primary:hover {
+            background-color: #64b5f6;
+            color: #121212;
+        }
+
+        .dark-mode .social-icons a {
+            color: #64b5f6 !important;
+        }
+
+        .dark-mode .social-icons a:hover {
+            color: #90caf9 !important;
+        }
+
+        .dark-mode .list-unstyled li a {
+            color: #a0a0a0;
+        }
+
+        .dark-mode .list-unstyled li a:hover {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .small {
+            color: #b0bec5 !important;
+        }
+
+        .dark-mode .lead {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .display-4,
+        .dark-mode .display-5 {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .h2,
+        .dark-mode .h3,
+        .dark-mode .h5,
+        .dark-mode .h6 {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .card-title {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .card-text {
+            color: #b0bec5;
+        }
+
+        .dark-mode .portfolio-title {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .portfolio-description {
+            color: #b0bec5;
+        }
+    </style>
+</body>
+</html>

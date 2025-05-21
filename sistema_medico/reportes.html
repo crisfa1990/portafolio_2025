@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - MediSystem</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hospital-alt me-2"></i> MediSystem
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pacientes.html">Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="citas.html">Citas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctores.html">Doctores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historial_medico.html">Historial Médico</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="reportes.html">Reportes</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle me-2"></i> Dr. García
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container-fluid py-4">
+        <!-- Encabezado y Botones de Acción -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="mb-0">Reportes y Estadísticas</h2>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-danger">
+                    <i class="fas fa-file-pdf me-2"></i>Exportar PDF
+                </button>
+                <button class="btn btn-outline-danger">
+                    <i class="fas fa-file-excel me-2"></i>Exportar Excel
+                </button>
+            </div>
+        </div>
+
+        <!-- Filtros de Reporte -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <form class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Tipo de Reporte</label>
+                        <select class="form-select">
+                            <option selected>Reporte General</option>
+                            <option>Reporte de Pacientes</option>
+                            <option>Reporte de Citas</option>
+                            <option>Reporte de Ingresos</option>
+                            <option>Reporte de Doctores</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Período</label>
+                        <select class="form-select">
+                            <option selected>Último Mes</option>
+                            <option>Últimos 3 Meses</option>
+                            <option>Últimos 6 Meses</option>
+                            <option>Último Año</option>
+                            <option>Personalizado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Fecha Inicio</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Fecha Fin</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-filter me-2"></i>Generar Reporte
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Resumen de Estadísticas -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="text-muted mb-2">Total Pacientes</h6>
+                                <h3 class="mb-0">1,234</h3>
+                                <p class="text-success mb-0"><i class="fas fa-arrow-up me-1"></i>12% vs mes anterior</p>
+                            </div>
+                            <div class="bg-danger bg-opacity-10 p-3 rounded">
+                                <i class="fas fa-users fa-2x text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="text-muted mb-2">Citas Realizadas</h6>
+                                <h3 class="mb-0">856</h3>
+                                <p class="text-success mb-0"><i class="fas fa-arrow-up me-1"></i>8% vs mes anterior</p>
+                            </div>
+                            <div class="bg-danger bg-opacity-10 p-3 rounded">
+                                <i class="fas fa-calendar-check fa-2x text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="text-muted mb-2">Ingresos Totales</h6>
+                                <h3 class="mb-0">$45,678</h3>
+                                <p class="text-success mb-0"><i class="fas fa-arrow-up me-1"></i>15% vs mes anterior</p>
+                            </div>
+                            <div class="bg-danger bg-opacity-10 p-3 rounded">
+                                <i class="fas fa-dollar-sign fa-2x text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="text-muted mb-2">Doctores Activos</h6>
+                                <h3 class="mb-0">24</h3>
+                                <p class="text-success mb-0"><i class="fas fa-arrow-up me-1"></i>4% vs mes anterior</p>
+                            </div>
+                            <div class="bg-danger bg-opacity-10 p-3 rounded">
+                                <i class="fas fa-user-md fa-2x text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráficos y Tablas -->
+        <div class="row">
+            <!-- Gráfico de Citas por Mes -->
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Citas por Mes</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="citasChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráfico de Ingresos por Especialidad -->
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Ingresos por Especialidad</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="ingresosChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de Doctores más Activos -->
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Doctores más Activos</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Doctor</th>
+                                        <th>Especialidad</th>
+                                        <th>Citas</th>
+                                        <th>Pacientes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dr. García</td>
+                                        <td>Medicina General</td>
+                                        <td>156</td>
+                                        <td>89</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dra. Martínez</td>
+                                        <td>Pediatría</td>
+                                        <td>142</td>
+                                        <td>78</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dr. López</td>
+                                        <td>Cardiología</td>
+                                        <td>128</td>
+                                        <td>65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dra. Rodríguez</td>
+                                        <td>Ginecología</td>
+                                        <td>115</td>
+                                        <td>72</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dr. Sánchez</td>
+                                        <td>Dermatología</td>
+                                        <td>98</td>
+                                        <td>54</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de Diagnósticos más Comunes -->
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Diagnósticos más Comunes</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Diagnóstico</th>
+                                        <th>Cantidad</th>
+                                        <th>% del Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Infección Respiratoria</td>
+                                        <td>245</td>
+                                        <td>18.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hipertensión</td>
+                                        <td>189</td>
+                                        <td>14.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Diabetes Tipo 2</td>
+                                        <td>156</td>
+                                        <td>11.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gripe</td>
+                                        <td>142</td>
+                                        <td>10.7%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dolor de Cabeza</td>
+                                        <td>128</td>
+                                        <td>9.6%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts para los gráficos -->
+    <script>
+        // Gráfico de Citas por Mes
+        const citasCtx = document.getElementById('citasChart').getContext('2d');
+        const citasChart = new Chart(citasCtx, {
+            type: 'line',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                datasets: [{
+                    label: 'Citas',
+                    data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56],
+                    fill: false,
+                    borderColor: '#dc3545',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+
+        // Gráfico de Ingresos por Especialidad
+        const ingresosCtx = document.getElementById('ingresosChart').getContext('2d');
+        const ingresosChart = new Chart(ingresosCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Medicina General', 'Pediatría', 'Cardiología', 'Ginecología', 'Dermatología', 'Otros'],
+                datasets: [{
+                    data: [30, 25, 15, 12, 10, 8],
+                    backgroundColor: [
+                        '#dc3545',
+                        '#fd7e14',
+                        '#ffc107',
+                        '#28a745',
+                        '#17a2b8',
+                        '#6c757d'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

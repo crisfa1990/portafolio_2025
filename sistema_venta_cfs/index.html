@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema POS - Supermercado</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-shop"></i> Sistema POS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="bi bi-cart"></i> Punto de Venta
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="finalizar-compra.html">
+                            <i class="bi bi-check-circle"></i> Finalizar Compra
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="revisar-ventas.html">
+                            <i class="bi bi-clock-history"></i> Revisar Ventas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ingresar-productos.html">
+                            <i class="bi bi-box-seam"></i> Ingresar Productos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gestion-inventario.html">
+                            <i class="bi bi-boxes"></i> Gestión Inventario
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gestion-usuarios.html">
+                            <i class="bi bi-people"></i> Gestión Usuarios
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-3">
+        <!-- Encabezado -->
+        <header class="mb-4">
+            <h1 class="text-primary">Sistema de Punto de Venta</h1>
+            <p class="text-muted">Supermercado Minorista</p>
+        </header>
+
+        <div class="row">
+            <!-- Columna Principal - Área de Venta -->
+            <div class="col-md-8">
+                <!-- Área de Adición de Productos -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-upc-scan text-primary"></i> Agregar Producto
+                        </h5>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Escanear código o ingresar nombre/código">
+                            <button class="btn btn-primary">
+                                <i class="bi bi-upc-scan"></i> Agregar Producto
+                            </button>
+                        </div>
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Buscar producto...">
+                            <button class="btn btn-outline-secondary">
+                                <i class="bi bi-search"></i> Buscar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Productos -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-cart text-primary"></i> Productos en Venta
+                        </h5>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover table-bordered border-primary">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio Unit.</th>
+                                        <th>Subtotal</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Producto Ejemplo</td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+                                        </td>
+                                        <td>$100.00</td>
+                                        <td>$100.00</td>
+                                        <td>
+                                            <button class="btn btn-outline-danger btn-sm">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Lateral - Totales y Pagos -->
+            <div class="col-md-4">
+                <!-- Área de Totales -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-cash text-primary"></i> Resumen de Venta
+                        </h5>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Subtotal:</span>
+                            <span class="fw-bold">$100.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>IVA (19%):</span>
+                            <span class="text-muted">$19.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Total:</span>
+                            <span class="display-6 text-primary fw-bold">$119.00</span>
+                        </div>
+
+                        <!-- Descuentos -->
+                        <div class="mb-3">
+                            <h6>
+                                <i class="bi bi-tag text-warning"></i> Descuentos
+                            </h6>
+                            <div class="btn-group mb-2">
+                                <button class="btn btn-sm btn-warning">0%</button>
+                                <button class="btn btn-sm btn-warning">5%</button>
+                                <button class="btn btn-sm btn-warning">10%</button>
+                                <button class="btn btn-sm btn-warning">15%</button>
+                            </div>
+                            <div class="input-group">
+                                <input type="number" class="form-control form-control-sm" placeholder="Descuento personalizado">
+                                <button class="btn btn-sm btn-warning">Aplicar</button>
+                            </div>
+                        </div>
+
+                        <!-- Método de Pago -->
+                        <div class="mb-3">
+                            <h6>
+                                <i class="bi bi-credit-card text-primary"></i> Método de Pago
+                            </h6>
+                            <select class="form-select mb-2">
+                                <option value="efectivo">Efectivo</option>
+                                <option value="debito">Tarjeta Débito</option>
+                                <option value="credito">Tarjeta Crédito</option>
+                                <option value="vale">Vale</option>
+                            </select>
+
+                            <!-- Área de Pago en Efectivo -->
+                            <div class="mt-2">
+                                <div class="input-group mb-2">
+                                    <input type="number" class="form-control" placeholder="Monto Recibido">
+                                    <button class="btn btn-success">Calcular Vuelto</button>
+                                </div>
+                                <div class="alert alert-info">
+                                    <i class="bi bi-cash-stack"></i> Vuelto: $0.00
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón Finalizar Venta -->
+                        <button class="btn btn-success btn-lg w-100">
+                            <i class="bi bi-check-circle"></i> Finalizar Venta
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Área de Boleta -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-receipt text-primary"></i> Boleta
+                        </h5>
+                        <div class="border p-3 mb-3">
+                            <h6 class="text-center">Supermercado Minorista</h6>
+                            <p class="small text-muted mb-1">Boleta #12345</p>
+                            <p class="small text-muted mb-3">Fecha: 01/01/2024 12:00</p>
+                            <hr>
+                            <div class="small">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Producto Ejemplo</span>
+                                    <span>$100.00</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Subtotal:</span>
+                                <span>$100.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>IVA:</span>
+                                <span>$19.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between fw-bold">
+                                <span>Total:</span>
+                                <span>$119.00</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm w-100">
+                            <i class="bi bi-printer"></i> Imprimir Boleta
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

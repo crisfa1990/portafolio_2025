@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empleados - Sistema de RRHH</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Sistema RRHH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="empleados.html">Empleados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tiempos.html">Tiempos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="remuneraciones.html">Remuneraciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informes.html">Informes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ausencias.html">Ausencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="beneficios.html">Beneficios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="configuracion.html">Configuración</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Gestión de Empleados</h1>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nuevoEmpleadoModal">
+                <i class="bi bi-person-plus"></i> Nuevo Empleado
+            </button>
+        </div>
+
+        <!-- Filtros y búsqueda -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Buscar empleado...">
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option value="">Todos los departamentos</option>
+                            <option>Ventas</option>
+                            <option>IT</option>
+                            <option>RRHH</option>
+                            <option>Administración</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option value="">Todos los cargos</option>
+                            <option>Gerente</option>
+                            <option>Analista</option>
+                            <option>Asistente</option>
+                            <option>Desarrollador</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-outline-primary w-100">Filtrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de empleados -->
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Departamento</th>
+                                <th>Cargo</th>
+                                <th>Fecha Ingreso</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EMP001</td>
+                                <td>Juan Pérez</td>
+                                <td>Ventas</td>
+                                <td>Gerente</td>
+                                <td>15/01/2020</td>
+                                <td><span class="badge bg-success">Activo</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>EMP002</td>
+                                <td>María García</td>
+                                <td>IT</td>
+                                <td>Desarrolladora</td>
+                                <td>20/03/2021</td>
+                                <td><span class="badge bg-success">Activo</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>EMP003</td>
+                                <td>Carlos López</td>
+                                <td>RRHH</td>
+                                <td>Analista</td>
+                                <td>10/05/2022</td>
+                                <td><span class="badge bg-warning">Vacaciones</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nuevo Empleado -->
+    <div class="modal fade" id="nuevoEmpleadoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Empleado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Apellidos</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Departamento</label>
+                                <select class="form-select">
+                                    <option>Ventas</option>
+                                    <option>IT</option>
+                                    <option>RRHH</option>
+                                    <option>Administración</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Cargo</label>
+                                <select class="form-select">
+                                    <option>Gerente</option>
+                                    <option>Analista</option>
+                                    <option>Asistente</option>
+                                    <option>Desarrollador</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Fecha de Ingreso</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Salario Base</label>
+                                <input type="number" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

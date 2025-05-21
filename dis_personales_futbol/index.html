@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Noticias de Fútbol</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { background: #10151a; }
+    .noticia:hover { box-shadow: 0 8px 24px 0 rgba(16,185,129,0.18); transform: translateY(-4px) scale(1.03); }
+    .publicidad { background: linear-gradient(135deg, #14532d 60%, #064e3b 100%); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#10151a] text-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-green-950 text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex flex-wrap items-center justify-between py-3 px-4">
+      <div class="flex items-center gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/1975/1975643.png" alt="Logo" class="w-10 h-10">
+        <span class="text-2xl font-bold tracking-tight">Fútbol News</span>
+      </div>
+      <ul class="flex gap-6 text-lg font-medium">
+        <li><a href="#" class="hover:text-green-400 transition">Inicio</a></li>
+        <li><a href="#" class="hover:text-green-400 transition">Ligas</a></li>
+        <li><a href="#" class="hover:text-green-400 transition">Equipos</a></li>
+        <li><a href="#" class="hover:text-green-400 transition">Estadios</a></li>
+        <li><a href="#" class="hover:text-green-400 transition">Jugadores</a></li>
+        <li><a href="#" class="hover:text-green-400 transition">Opinión</a></li>
+        <li><a href="#" class="hover:text-green-400 transition">Contacto</a></li>
+      </ul>
+      <div class="flex gap-2">
+        <button class="bg-green-800 hover:bg-green-700 text-white px-4 py-2 rounded transition">Suscríbete</button>
+        <button class="bg-gray-900 text-green-400 border border-green-700 px-4 py-2 rounded hover:bg-green-950 transition">Iniciar Sesión</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="flex-1 container mx-auto flex flex-row gap-6 py-8 px-4">
+    <!-- Noticias -->
+    <section class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Noticia 1 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1505843276877-1a8b1bfa6c64?auto=format&fit=crop&w=600&q=80" alt="Noticia 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">¡Victoria épica en el último minuto!</h2>
+          <p class="text-gray-300 mb-2">El equipo local logró una remontada histórica con un gol en el tiempo añadido.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 2 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 2 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="50">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Noticia 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">El nuevo fichaje sorprende en su debut</h2>
+          <p class="text-gray-300 mb-2">El delantero marcó dos goles y fue ovacionado por la afición.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 3 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 3 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Noticia 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">Análisis táctico: ¿Por qué ganó el visitante?</h2>
+          <p class="text-gray-300 mb-2">Un repaso a las claves estratégicas del partido más esperado de la jornada.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 4 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 4 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="150">
+        <img src="https://images.unsplash.com/photo-1505843276877-1a8b1bfa6c64?auto=format&fit=crop&w=600&q=80" alt="Noticia 4" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">El clásico termina en empate</h2>
+          <p class="text-gray-300 mb-2">Ambos equipos mostraron un gran nivel, pero no lograron romper la igualdad.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 5 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 5 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Noticia 5" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">Lesión preocupa al cuerpo técnico</h2>
+          <p class="text-gray-300 mb-2">El mediocampista será evaluado tras salir lesionado en el primer tiempo.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 6 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 6 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="250">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Noticia 6" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">El VAR vuelve a ser protagonista</h2>
+          <p class="text-gray-300 mb-2">Una decisión polémica cambió el rumbo del partido.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 7 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 7 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://images.unsplash.com/photo-1505843276877-1a8b1bfa6c64?auto=format&fit=crop&w=600&q=80" alt="Noticia 7" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">Juvenil debuta con golazo</h2>
+          <p class="text-gray-300 mb-2">El joven talento marcó un gol espectacular en su primer partido.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 8 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 8 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="350">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Noticia 8" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">El entrenador revela su estrategia</h2>
+          <p class="text-gray-300 mb-2">En conferencia de prensa, el DT explicó los cambios tácticos.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 9 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 9 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Noticia 9" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">Se confirma el calendario de la liga</h2>
+          <p class="text-gray-300 mb-2">La organización publicó las fechas oficiales de la próxima temporada.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 10 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 10 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="450">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Noticia 10" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">El capitán renueva contrato</h2>
+          <p class="text-gray-300 mb-2">El referente del equipo seguirá una temporada más.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 11 horas</span>
+        </div>
+      </article>
+      <!-- Noticia 11 -->
+      <article class="noticia bg-[#18232e] rounded-lg overflow-hidden shadow transition duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="500">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Noticia 11" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-400 mb-2">La afición prepara un mosaico especial</h2>
+          <p class="text-gray-300 mb-2">El estadio lucirá un ambiente único en el próximo partido.</p>
+          <span class="text-xs text-green-500 font-semibold">Hace 12 horas</span>
+        </div>
+      </article>
+    </section>
+    <!-- Publicidad -->
+    <aside class="hidden lg:block w-72 ml-2 publicidad rounded-xl shadow-lg flex flex-col items-center p-4 text-white animate-pulse" data-aos="fade-left">
+      <h3 class="text-xl font-bold mb-4">Publicidad</h3>
+      <a href="#" class="block mb-4">
+        <img src="https://via.placeholder.com/250x250?text=Publicidad" alt="Publicidad" class="rounded-lg shadow-lg hover:scale-105 transition duration-300">
+      </a>
+      <p class="text-center text-sm">¡Anúnciate aquí y llega a miles de fanáticos del fútbol!</p>
+      <button class="mt-6 bg-gray-900 text-green-400 font-bold px-4 py-2 rounded hover:bg-green-950 transition">Contactar</button>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-950 text-white text-center py-4 mt-8">
+    <div class="container mx-auto">
+      &copy; 2024 Fútbol News. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- AOS Animations JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html> 

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Doctores - MediSystem</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hospital-alt me-2"></i> MediSystem
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pacientes.html">Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="citas.html">Citas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="doctores.html">Doctores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historial_medico.html">Historial Médico</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reportes.html">Reportes</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle me-2"></i> Dr. García
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container-fluid py-4">
+        <!-- Encabezado y Botones de Acción -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="mb-0">Gestión de Doctores</h2>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#nuevoDoctorModal">
+                <i class="fas fa-plus me-2"></i>Nuevo Doctor
+            </button>
+        </div>
+
+        <!-- Filtros de Búsqueda -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <form class="row g-3">
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white">
+                                <i class="fas fa-search text-danger"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Buscar doctor...">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select">
+                            <option selected>Especialidad</option>
+                            <option>Medicina General</option>
+                            <option>Cardiología</option>
+                            <option>Pediatría</option>
+                            <option>Ginecología</option>
+                            <option>Dermatología</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select">
+                            <option selected>Estado</option>
+                            <option>Activo</option>
+                            <option>Inactivo</option>
+                            <option>Vacaciones</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select">
+                            <option selected>Horario</option>
+                            <option>Matutino</option>
+                            <option>Vespertino</option>
+                            <option>Completo</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-danger flex-grow-1">
+                                <i class="fas fa-filter me-2"></i>Filtrar
+                            </button>
+                            <button type="reset" class="btn btn-outline-danger">
+                                <i class="fas fa-undo me-2"></i>Limpiar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Lista de Doctores -->
+        <div class="row">
+            <!-- Tarjeta de Doctor -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://placehold.co/80x80/dc3545/ffffff?text=RG" class="rounded-circle me-3" alt="Dr. García">
+                            <div>
+                                <h5 class="card-title mb-1">Dr. Roberto García</h5>
+                                <p class="text-muted mb-0">Medicina General</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="badge bg-success">Activo</span>
+                            <span class="badge bg-info">Matutino</span>
+                        </div>
+                        <div class="mb-3">
+                            <p class="mb-1"><i class="fas fa-envelope text-danger me-2"></i>roberto.garcia@medisystem.com</p>
+                            <p class="mb-1"><i class="fas fa-phone text-danger me-2"></i>+1 234 567 890</p>
+                            <p class="mb-1"><i class="fas fa-calendar text-danger me-2"></i>Lun - Vie, 8:00 - 14:00</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-danger" title="Ver Perfil">
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <button class="btn btn-sm btn-danger">
+                                <i class="fas fa-calendar-check me-1"></i>Agendar Cita
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Doctor -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://placehold.co/80x80/dc3545/ffffff?text=AM" class="rounded-circle me-3" alt="Dra. Martínez">
+                            <div>
+                                <h5 class="card-title mb-1">Dra. Ana Martínez</h5>
+                                <p class="text-muted mb-0">Pediatría</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="badge bg-success">Activo</span>
+                            <span class="badge bg-info">Vespertino</span>
+                        </div>
+                        <div class="mb-3">
+                            <p class="mb-1"><i class="fas fa-envelope text-danger me-2"></i>ana.martinez@medisystem.com</p>
+                            <p class="mb-1"><i class="fas fa-phone text-danger me-2"></i>+1 234 567 891</p>
+                            <p class="mb-1"><i class="fas fa-calendar text-danger me-2"></i>Lun - Vie, 14:00 - 20:00</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-danger" title="Ver Perfil">
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <button class="btn btn-sm btn-danger">
+                                <i class="fas fa-calendar-check me-1"></i>Agendar Cita
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Doctor -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://placehold.co/80x80/dc3545/ffffff?text=JL" class="rounded-circle me-3" alt="Dr. López">
+                            <div>
+                                <h5 class="card-title mb-1">Dr. José López</h5>
+                                <p class="text-muted mb-0">Cardiología</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="badge bg-warning">Vacaciones</span>
+                            <span class="badge bg-info">Completo</span>
+                        </div>
+                        <div class="mb-3">
+                            <p class="mb-1"><i class="fas fa-envelope text-danger me-2"></i>jose.lopez@medisystem.com</p>
+                            <p class="mb-1"><i class="fas fa-phone text-danger me-2"></i>+1 234 567 892</p>
+                            <p class="mb-1"><i class="fas fa-calendar text-danger me-2"></i>Lun - Vie, 8:00 - 20:00</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-danger" title="Ver Perfil">
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <button class="btn btn-sm btn-danger">
+                                <i class="fas fa-calendar-check me-1"></i>Agendar Cita
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paginación -->
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Modal Nuevo Doctor -->
+    <div class="modal fade" id="nuevoDoctorModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Doctor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Especialidad</label>
+                                <select class="form-select" required>
+                                    <option value="">Seleccionar especialidad...</option>
+                                    <option>Medicina General</option>
+                                    <option>Cardiología</option>
+                                    <option>Pediatría</option>
+                                    <option>Ginecología</option>
+                                    <option>Dermatología</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Número de Colegiado</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Horario de Trabajo</label>
+                                <select class="form-select" required>
+                                    <option value="">Seleccionar horario...</option>
+                                    <option>Matutino (8:00 - 14:00)</option>
+                                    <option>Vespertino (14:00 - 20:00)</option>
+                                    <option>Completo (8:00 - 20:00)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Días de Trabajo</label>
+                                <select class="form-select" required>
+                                    <option value="">Seleccionar días...</option>
+                                    <option>Lunes a Viernes</option>
+                                    <option>Lunes a Sábado</option>
+                                    <option>Martes a Sábado</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Biografía</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Especialidades Adicionales</label>
+                                <input type="text" class="form-control" placeholder="Separadas por comas">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger">Guardar Doctor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

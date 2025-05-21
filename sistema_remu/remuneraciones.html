@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remuneraciones - Sistema de RRHH</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Sistema RRHH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="empleados.html">Empleados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tiempos.html">Tiempos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="remuneraciones.html">Remuneraciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informes.html">Informes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ausencias.html">Ausencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="beneficios.html">Beneficios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="configuracion.html">Configuración</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Gestión de Remuneraciones</h1>
+            <div>
+                <button class="btn btn-outline-primary me-2">
+                    <i class="bi bi-download"></i> Exportar
+                </button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#procesarNominaModal">
+                    <i class="bi bi-cash-stack"></i> Procesar Nómina
+                </button>
+            </div>
+        </div>
+
+        <!-- Filtros y búsqueda -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" placeholder="Buscar empleado...">
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option value="">Todos los departamentos</option>
+                            <option>Ventas</option>
+                            <option>IT</option>
+                            <option>RRHH</option>
+                            <option>Administración</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option value="">Seleccionar mes</option>
+                            <option>Marzo 2024</option>
+                            <option>Febrero 2024</option>
+                            <option>Enero 2024</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-outline-primary w-100">Filtrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjetas de resumen -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card text-white bg-primary">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Nómina</h5>
+                        <h2 class="card-text">$450,000</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-success">
+                    <div class="card-body">
+                        <h5 class="card-title">Empleados</h5>
+                        <h2 class="card-text">150</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-warning">
+                    <div class="card-body">
+                        <h5 class="card-title">Horas Extras</h5>
+                        <h2 class="card-text">$25,000</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-info">
+                    <div class="card-body">
+                        <h5 class="card-title">Bonificaciones</h5>
+                        <h2 class="card-text">$15,000</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de nómina -->
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Empleado</th>
+                                <th>Departamento</th>
+                                <th>Salario Base</th>
+                                <th>Horas Extras</th>
+                                <th>Bonificaciones</th>
+                                <th>Descuentos</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Juan Pérez</td>
+                                <td>Ventas</td>
+                                <td>$25,000</td>
+                                <td>$2,500</td>
+                                <td>$1,000</td>
+                                <td>$500</td>
+                                <td>$28,000</td>
+                                <td><span class="badge bg-success">Pagado</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-success">
+                                        <i class="bi bi-printer"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>María García</td>
+                                <td>IT</td>
+                                <td>$30,000</td>
+                                <td>$3,000</td>
+                                <td>$1,500</td>
+                                <td>$750</td>
+                                <td>$33,750</td>
+                                <td><span class="badge bg-success">Pagado</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-success">
+                                        <i class="bi bi-printer"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Carlos López</td>
+                                <td>RRHH</td>
+                                <td>$22,000</td>
+                                <td>$1,500</td>
+                                <td>$800</td>
+                                <td>$400</td>
+                                <td>$23,900</td>
+                                <td><span class="badge bg-warning">Pendiente</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-success">
+                                        <i class="bi bi-printer"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Procesar Nómina -->
+    <div class="modal fade" id="procesarNominaModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Procesar Nómina</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Período</label>
+                                <select class="form-select">
+                                    <option>Marzo 2024</option>
+                                    <option>Febrero 2024</option>
+                                    <option>Enero 2024</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Fecha de Pago</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Tipo de Nómina</label>
+                                <select class="form-select">
+                                    <option>Quincenal</option>
+                                    <option>Mensual</option>
+                                    <option>Semanal</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Método de Pago</label>
+                                <select class="form-select">
+                                    <option>Transferencia Bancaria</option>
+                                    <option>Cheque</option>
+                                    <option>Efectivo</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="incluirHorasExtras">
+                                    <label class="form-check-label" for="incluirHorasExtras">
+                                        Incluir Horas Extras
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="incluirBonificaciones">
+                                    <label class="form-check-label" for="incluirBonificaciones">
+                                        Incluir Bonificaciones
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Procesar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

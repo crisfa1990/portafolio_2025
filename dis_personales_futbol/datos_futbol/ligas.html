@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligas - Portal de Fútbol</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portal de Fútbol</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estadios.html">Estadios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ligas.html">Ligas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipos.html">Equipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jugadores.html">Jugadores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Ligas y Competiciones</h1>
+
+        <!-- Filtro de Búsqueda -->
+        <div class="row mb-4">
+            <div class="col-md-6 mx-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar liga..." aria-label="Buscar liga">
+                    <button class="btn btn-primary" type="button">Buscar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid de Ligas -->
+        <div class="row g-4">
+            <!-- Liga 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">LaLiga</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">España</h6>
+                        <p class="card-text">Primera División del fútbol español</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">20 equipos</span>
+                            <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liga 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Premier League</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Inglaterra</h6>
+                        <p class="card-text">Primera División del fútbol inglés</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">20 equipos</span>
+                            <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liga 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Serie A</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Italia</h6>
+                        <p class="card-text">Primera División del fútbol italiano</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">20 equipos</span>
+                            <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liga 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Bundesliga</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Alemania</h6>
+                        <p class="card-text">Primera División del fútbol alemán</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">18 equipos</span>
+                            <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">© 2024 Portal de Fútbol. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
