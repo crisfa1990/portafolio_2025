@@ -31,18 +31,15 @@
     </div>
 
     <!-- Header with Logo and Login -->
-    <div class="container py-3">
-        <div class="row align-items-center">
-            <div class="col-md-4 col-6">
-                <button class="navbar-toggler border-0 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            <div class="col-md-4 col-6 text-center">
-                <h1 class="fw-bold text-uppercase mb-0">GOAL NEWS</h1>
-            </div>
-            <div class="col-md-4 text-end d-none d-md-block">
-                <a href="#" class="text-dark text-decoration-none">Login / Register</a>
+    <div class="container-fluid py-3 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 col-6">
+                    <h1 class="fw-bold text-uppercase mb-0">GOAL NEWS</h1>
+                </div>
+                <div class="col-md-4 col-6 text-end">
+                    <a href="#" class="text-white text-decoration-none">Login / Register</a>
+                </div>
             </div>
         </div>
     </div>
@@ -50,19 +47,22 @@
     <!-- Main Navigation -->
     <nav class="navbar navbar-expand-md navbar-light bg-white border-top border-bottom">
         <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link text-uppercase fw-bold" href="#">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-uppercase fw-bold" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-uppercase fw-bold" href="#">Leagues</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-uppercase fw-bold" href="#">Teams</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-uppercase fw-bold" href="#">Players</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-uppercase fw-bold" href="#">Transfers</a>
@@ -79,13 +79,11 @@
     <div class="container-fluid bg-danger py-2">
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
-                    <span class="badge bg-dark">BREAKING NEWS</span>
-                </div>
-                <div class="col-md-10">
-                    <marquee>
-                        Manchester United signs new striker • Champions League semifinals begin tomorrow • Barcelona announces new coach • Premier League title race heats up
-                    </marquee>
+                <div class="col-12">
+                    <div class="text-white">
+                        <strong>BREAKING NEWS:</strong> 
+                        Premier League title race heats up • Manchester United signs new striker • Champions League semifinals begin tomorrow
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,47 +93,55 @@
     <div class="container mt-4">
         <!-- Featured News Section -->
         <div class="row">
-            <!-- Main Feature -->
-            <div class="col-lg-8 mb-4">
+            <!-- Main Feature - Hero Banner -->
+            <div class="col-12 mb-4">
                 <div class="position-relative">
-                    <img src="/api/placeholder/800/500" alt="Featured news" class="img-fluid w-100">
-                    <div class="position-absolute bottom-0 start-0 p-4 text-white" style="background: rgba(0,0,0,0.7); width: 100%;">
-                        <span class="badge bg-danger mb-2">Premier League</span>
-                        <h2 class="mb-2">Liverpool Takes Commanding Lead in Premier League After Derby Win</h2>
-                        <p class="mb-1">The Reds now sit five points clear at the top of the table after dramatic victory</p>
-                        <small>24 April 2023 • By James Wilson</small>
+                    <div class="bg-dark text-white py-4">
+                        <div class="container">
+                            <!-- Badge and Title -->
+                            <div class="mb-2">
+                                <span class="badge bg-danger">Premier League</span>
+                            </div>
+                            <h1 class="mb-2">Liverpool Takes Commanding Lead in Premier League After Derby Win</h1>
+                            <p class="mb-1">The Reds now sit five points clear at the top of the table after dramatic victory</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <span class="badge bg-secondary me-2">BREAKING NEWS</span>
+                                <small>24 April 2023 • By James Wilson</small>
+                            </div>
+                        </div>
                     </div>
+                    <img src="/api/placeholder/1200/400" alt="Featured news" class="img-fluid w-100">
                 </div>
             </div>
-
-            <!-- Secondary Features -->
+        </div>
+        
+        <!-- Secondary Features -->
+        <div class="row mb-4">
+            <div class="col-lg-8">
+                <!-- This is where we'll put other content later -->
+            </div>
             <div class="col-lg-4">
-                <div class="row">
-                    <div class="col-12 mb-4">
-                        <div class="position-relative">
-                            <img src="/api/placeholder/400/250" alt="News item" class="img-fluid w-100">
-                            <div class="position-absolute bottom-0 start-0 p-3 text-white" style="background: rgba(0,0,0,0.7); width: 100%;">
-                                <span class="badge bg-primary mb-1">Champions League</span>
-                                <h5 class="mb-0">Real Madrid Reaches Final After Dramatic Comeback</h5>
-                                <small>24 April 2023</small>
-                            </div>
-                        </div>
+                <div class="position-relative mb-4">
+                    <img src="/api/placeholder/400/220" alt="Champions League news" class="img-fluid w-100">
+                    <div class="position-absolute bottom-0 start-0 p-3 text-white" style="background: rgba(0,0,0,0.7); width: 100%;">
+                        <span class="badge bg-primary mb-1">Champions League</span>
+                        <h5 class="mb-0">Real Madrid Reaches Final After Dramatic Comeback</h5>
+                        <small>24 April 2023</small>
                     </div>
-                    <div class="col-12">
-                        <div class="position-relative">
-                            <img src="/api/placeholder/400/250" alt="News item" class="img-fluid w-100">
-                            <div class="position-absolute bottom-0 start-0 p-3 text-white" style="background: rgba(0,0,0,0.7); width: 100%;">
-                                <span class="badge bg-success mb-1">Transfer News</span>
-                                <h5 class="mb-0">Bayern Munich Set to Sign Young Brazilian Prodigy</h5>
-                                <small>24 April 2023</small>
-                            </div>
-                        </div>
+                </div>
+                <div class="position-relative">
+                    <img src="/api/placeholder/400/220" alt="Transfer news" class="img-fluid w-100">
+                    <div class="position-absolute bottom-0 start-0 p-3 text-white" style="background: rgba(0,0,0,0.7); width: 100%;">
+                        <span class="badge bg-success mb-1">Transfer News</span>
+                        <h5 class="mb-0">Bayern Munich Set to Sign Young Brazilian Prodigy</h5>
+                        <small>24 April 2023</small>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Latest News Section -->
+    <!-- Latest News Section -->
+    <div class="container my-5">
         <h3 class="border-bottom pb-2 mb-4">LATEST NEWS</h3>
         <div class="row">
             <div class="col-md-3 col-6 mb-4">
@@ -179,6 +185,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- Two Column Section -->
         <div class="row mt-4">
