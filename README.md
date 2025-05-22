@@ -1,7 +1,7 @@
-# Portafolio Web DevSolutions
+# Portafolio CFS
 
 ## Descripción General
-Este proyecto es un portafolio web moderno y responsivo para DevSolutions, una empresa de desarrollo web y aplicaciones. El sitio está construido con HTML5, CSS3, JavaScript y Bootstrap 5, ofreciendo una experiencia de usuario optimizada tanto en dispositivos móviles como de escritorio.
+Este proyecto es un portafolio web moderno y responsivo para nosotros, una empresa de desarrollo web y aplicaciones. El sitio está construido con HTML5, CSS3, JavaScript y Bootstrap 5, ofreciendo una experiencia de usuario optimizada tanto en dispositivos móviles como de escritorio.
 
 ## Estructura del Proyecto
 ```
@@ -181,12 +181,12 @@ if (localStorage.getItem('darkMode') === 'enabled') {
 
 1. Clonar el repositorio
 ```bash
-git clone [url-del-repositorio]
+git clone https://github.com/crisfa1990/portafolio_2025/
 ```
 
 2. Abrir el proyecto
 ```bash
-cd Portafolio_web
+cd portafolio_2025
 ```
 
 3. Iniciar servidor local
